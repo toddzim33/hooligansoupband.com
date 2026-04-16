@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Hooligan Soup — Kelowna, BC</title>
   <meta name="description" content="Hooligan Soup — Rock and pop rock covers from the 80s through 2000s. Based in Kelowna, BC." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -56,11 +58,13 @@
       z-index: 2;
       padding: 0 2.5rem 3.5rem;
     }
-    .hero-logo {
-      height: clamp(80px, 14vw, 160px);
-      width: auto;
-      display: block;
-      margin-bottom: 4px;
+    .hero-title {
+      font-family: 'Dancing Script', cursive;
+      font-size: clamp(52px, 10vw, 110px);
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1;
+      text-shadow: 0 2px 20px rgba(0,0,0,0.5);
     }
     .hero-sub {
       font-size: 13px;
@@ -259,6 +263,16 @@
     }
     .social-row a:hover { color: var(--muted); }
 
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 1fr 140px;
+      gap: 3rem;
+      align-items: start;
+    }
+    @media (max-width: 600px) {
+      .contact-layout { grid-template-columns: 1fr; }
+    }
+
     /* ── FOOTER ── */
     footer {
       padding: 2rem 2.5rem;
@@ -290,7 +304,7 @@
   <div class="hero">
     <img src="images/oh.jpg" alt="Hooligan Soup" />
     <div class="hero-content">
-      <img class="hero-logo" src="images/HS1.jpg" alt="Hooligan Soup" />
+      <h1 class="hero-title">Hooligan Soup</h1>
       <p class="hero-sub">Kelowna, BC &nbsp;·&nbsp; Rock &amp; Pop Rock &nbsp;·&nbsp; 80s – 2000s</p>
     </div>
   </div>
@@ -321,7 +335,7 @@
           thought about in twenty years.
         </p>
         <div class="can-wrap">
-          <img src="images/HS2.jpg" alt="Hooligan Soup — Campbell's style" />
+          <img src="images/HS1.jpg" alt="Hooligan Soup logo" />
           <span class="can-label">Est. Kelowna</span>
         </div>
       </div>
@@ -360,17 +374,23 @@
   <section id="contact">
     <div class="inner">
       <div class="section-label">Contact / Booking</div>
-      <p class="contact-intro">For booking inquiries, venue conversations, or just to say hi —</p>
-      <a class="contact-email" href="mailto:toddz@hooligansoupband.com">toddz@hooligansoupband.com</a>
-      <div class="social-row">
-        <a href="https://www.facebook.com/hooligansoupband" target="_blank" rel="noopener">Facebook</a>
-        <!-- Add more social links here as needed -->
+      <div class="contact-layout">
+        <div>
+          <p class="contact-intro">For booking inquiries, venue conversations, or just to say hi —</p>
+          <a class="contact-email" href="mailto:toddz@hooligansoupband.com">toddz@hooligansoupband.com</a>
+          <div class="social-row">
+            <a href="https://www.facebook.com/hooligansoupband" target="_blank" rel="noopener">Facebook</a>
+          </div>
+        </div>
+        <div class="can-wrap">
+          <img src="images/HS2.jpg" alt="Hooligan Soup" />
+        </div>
       </div>
     </div>
   </section>
 
   <footer>
-    &copy; 2025 Hooligan Soup &nbsp;·&nbsp; Kelowna, BC
+    &copy; 2026 Hooligan Soup &nbsp;·&nbsp; Kelowna, BC
   </footer>
 
 </body>
