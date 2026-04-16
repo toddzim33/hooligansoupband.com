@@ -56,13 +56,11 @@
       z-index: 2;
       padding: 0 2.5rem 3.5rem;
     }
-    .hero h1 {
-      font-size: clamp(36px, 7vw, 68px);
-      font-weight: 600;
-      letter-spacing: 0.06em;
-      color: var(--white);
-      text-transform: uppercase;
-      line-height: 1;
+    .hero-logo {
+      height: clamp(80px, 14vw, 160px);
+      width: auto;
+      display: block;
+      margin-bottom: 4px;
     }
     .hero-sub {
       font-size: 13px;
@@ -85,13 +83,10 @@
       padding: 0 2.5rem;
       height: 54px;
     }
-    .nav-logo {
-      font-size: 12px;
-      font-weight: 600;
-      letter-spacing: 0.18em;
-      color: var(--white);
-      text-transform: uppercase;
-      text-decoration: none;
+    .nav-logo img {
+      height: 32px;
+      width: auto;
+      display: block;
     }
     .nav-links {
       display: flex;
@@ -156,7 +151,38 @@
       object-position: center 25%;
     }
 
-    /* ── SHOWS ── */
+    .about-layout {
+      display: grid;
+      grid-template-columns: 1fr 160px;
+      gap: 3rem;
+      align-items: start;
+    }
+    .can-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      padding-top: 0.5rem;
+    }
+    .can-wrap img {
+      width: 130px;
+      height: auto;
+      opacity: 0.85;
+      transition: opacity 0.3s;
+    }
+    .can-wrap img:hover { opacity: 1; }
+    .can-label {
+      font-size: 10px;
+      letter-spacing: 0.15em;
+      color: var(--faint);
+      text-transform: uppercase;
+      text-align: center;
+    }
+    @media (max-width: 600px) {
+      .about-layout { grid-template-columns: 1fr; }
+      .can-wrap { flex-direction: row; justify-content: flex-start; }
+      .can-wrap img { width: 80px; }
+    }
     .show-item {
       display: grid;
       grid-template-columns: 110px 1fr auto;
@@ -264,14 +290,16 @@
   <div class="hero">
     <img src="images/oh.jpg" alt="Hooligan Soup" />
     <div class="hero-content">
-      <h1>Hooligan Soup</h1>
+      <img class="hero-logo" src="images/HS1.jpg" alt="Hooligan Soup" />
       <p class="hero-sub">Kelowna, BC &nbsp;·&nbsp; Rock &amp; Pop Rock &nbsp;·&nbsp; 80s – 2000s</p>
     </div>
   </div>
 
   <!-- NAV -->
   <nav>
-    <a class="nav-logo" href="#">Hooligan Soup</a>
+    <a class="nav-logo" href="#">
+      <img src="images/HS1.jpg" alt="Hooligan Soup" />
+    </a>
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#shows">Shows</a></li>
@@ -283,14 +311,20 @@
   <section id="about">
     <div class="inner">
       <div class="section-label">About</div>
-      <p class="about-text">
-        <strong>Hooligan Soup</strong> is a four-piece rock band from Kelowna, BC, playing the songs
-        that defined a generation — 80s through early 2000s rock and pop rock. Big guitars, big hooks,
-        the kind of stuff that sounds like a Friday night should.
-        <br><br>
-        We play for the love of it. Come out, have a drink, sing something you haven't
-        thought about in twenty years.
-      </p>
+      <div class="about-layout">
+        <p class="about-text">
+          <strong>Hooligan Soup</strong> is a four-piece rock band from Kelowna, BC, playing the songs
+          that defined a generation — 80s through early 2000s rock and pop rock. Big guitars, big hooks,
+          the kind of stuff that sounds like a Friday night should.
+          <br><br>
+          We play for the love of it. Come out, have a drink, sing something you haven't
+          thought about in twenty years.
+        </p>
+        <div class="can-wrap">
+          <img src="images/HS2.jpg" alt="Hooligan Soup — Campbell's style" />
+          <span class="can-label">Est. Kelowna</span>
+        </div>
+      </div>
       <div class="photo-grid">
         <img src="images/oh.jpg"        alt="Hooligan Soup" />
         <img src="images/burn.jpg"      alt="Hooligan Soup golden hour" />
