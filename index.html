@@ -87,10 +87,13 @@
       padding: 0 2.5rem;
       height: 54px;
     }
-    .nav-logo img {
-      height: 32px;
-      width: auto;
-      display: block;
+    .nav-logo {
+      font-family: 'Dancing Script', cursive;
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--white);
+      text-decoration: none;
+      letter-spacing: 0.02em;
     }
     .nav-links {
       display: flex;
@@ -181,6 +184,8 @@
       color: var(--faint);
       text-transform: uppercase;
       text-align: center;
+      display: block;
+      width: 100%;
     }
     /* ── SHOWS ── */
     .show-item {
@@ -293,7 +298,6 @@
       .hero-content { padding: 0 1.25rem 2rem; }
 
       nav { padding: 0 1.25rem; height: 48px; }
-      .nav-logo img { height: 26px; }
       .nav-links { gap: 1.25rem; }
       .nav-links a { font-size: 10px; }
 
@@ -325,12 +329,8 @@
       }
       .show-tag { align-self: flex-start; margin-top: 0.25rem; }
 
-      .contact-layout {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-      }
+      .contact-layout { grid-template-columns: 1fr; gap: 2rem; }
       .contact-email { font-size: 15px; word-break: break-all; }
-
       footer { padding: 1.5rem 1.25rem; }
     }
 
@@ -354,9 +354,7 @@
 
   <!-- NAV -->
   <nav>
-    <a class="nav-logo" href="#">
-      <img src="images/HS1.jpg" alt="Hooligan Soup" />
-    </a>
+    <a class="nav-logo" href="#">Hooligan Soup</a>
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#shows">Shows</a></li>
@@ -383,7 +381,7 @@
         </div>
       </div>
       <div class="photo-grid">
-        <img src="images/oh.jpg"        alt="Hooligan Soup" />
+        <img src="images/prettty.okay.jpg" alt="Hooligan Soup" />
         <img src="images/burn.jpg"      alt="Hooligan Soup golden hour" />
         <img src="images/bw_roof_1.jpg" alt="Hooligan Soup rooftop" />
       </div>
@@ -395,7 +393,7 @@
     <div class="inner">
       <div class="section-label">Shows</div>
       <div class="show-item">
-        <div class="show-date">Summer 2025</div>
+        <div class="show-date">Summer 2026</div>
         <div>
           <div class="show-venue">TBA — Private Charity Event</div>
           <div class="show-location">Kelowna, BC</div>
@@ -417,17 +415,13 @@
   <section id="contact">
     <div class="inner">
       <div class="section-label">Contact / Booking</div>
-      <div class="contact-layout">
-        <div>
-          <p class="contact-intro">For booking inquiries, venue conversations, or just to say hi —</p>
-          <a class="contact-email" href="mailto:toddz@hooligansoupband.com">toddz@hooligansoupband.com</a>
-          <div class="social-row">
-            <a href="https://www.facebook.com/hooligansoupband" target="_blank" rel="noopener">Facebook</a>
-          </div>
-        </div>
-        <div class="can-wrap">
-          <img src="images/HS2.jpg" alt="Hooligan Soup" />
-        </div>
+      <p class="contact-intro">For booking inquiries, venue conversations, or just to say hi —</p>
+      <a class="contact-email" href="mailto:toddz@hooligansoupband.com">toddz@hooligansoupband.com</a>
+      <div class="can-wrap" style="margin-top: 2rem;">
+        <img src="images/HS2.jpg" alt="Hooligan Soup" />
+      </div>
+      <div class="social-row">
+        <a href="https://www.facebook.com/hooligansoupband" target="_blank" rel="noopener">Facebook</a>
       </div>
     </div>
   </section>
