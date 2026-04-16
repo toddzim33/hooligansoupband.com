@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hooligan Soup — Kelowna, BC</title>
-  <meta name="description" content="Hooligan Soup — Rock and pop rock covers from the 80s through 2000s. Based in Kelowna, BC." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+  <meta name="description" content="Hooligan Soup — Rock and pop rock covers from the 80s through 2000s. Based in Kelowna, BC.">
+  <link href="css2.css" rel="stylesheet">
   <style>
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -88,13 +87,13 @@
       height: 54px;
     }
     .nav-logo {
-      font-family: 'Dancing Script', cursive;
-      font-size: 22px;
-      font-weight: 700;
-      color: var(--white);
+      display: flex;
+      align-items: center;
+      opacity: 0.5;
+      transition: opacity 0.2s;
       text-decoration: none;
-      letter-spacing: 0.02em;
     }
+    .nav-logo:hover { opacity: 0.9; }
     .nav-links {
       display: flex;
       gap: 2.5rem;
@@ -155,7 +154,7 @@
     .photo-grid img:first-child {
       grid-column: 1 / -1;
       height: 300px;
-      object-position: center 25%;
+      object-position: center 35%;
     }
 
     .about-layout {
@@ -345,7 +344,7 @@
 
   <!-- HERO -->
   <div class="hero">
-    <img src="images/oh.jpg" alt="Hooligan Soup" />
+    <img src="images/oh.jpg" alt="Hooligan Soup">
     <div class="hero-content">
       <h1 class="hero-title">Hooligan Soup</h1>
       <p class="hero-sub">Kelowna, BC &nbsp;·&nbsp; Rock &amp; Pop Rock &nbsp;·&nbsp; 80s – 2000s</p>
@@ -354,7 +353,11 @@
 
   <!-- NAV -->
   <nav>
-    <a class="nav-logo" href="#">Hooligan Soup</a>
+    <a class="nav-logo" href="#">
+      <svg width="22" height="22" viewBox="0 0 100 100" fill="white" xmlns="http://www.w3.org/2000/svg">
+        <path d="M50 5 C50 5 10 35 10 58 C10 72 20 80 32 78 C28 86 22 92 12 95 L88 95 C78 92 72 86 68 78 C80 80 90 72 90 58 C90 35 50 5 50 5Z"/>
+      </svg>
+    </a>
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#shows">Shows</a></li>
@@ -376,14 +379,14 @@
           thought about in twenty years.
         </p>
         <div class="can-wrap">
-          <img src="images/HS1.jpg" alt="Hooligan Soup logo" />
+          <img src="images/HS1.jpg" alt="Hooligan Soup logo">
           <span class="can-label">Est. Kelowna</span>
         </div>
       </div>
       <div class="photo-grid">
-        <img src="images/prettty.okay.jpg" alt="Hooligan Soup" />
-        <img src="images/burn.jpg"      alt="Hooligan Soup golden hour" />
-        <img src="images/bw_roof_1.jpg" alt="Hooligan Soup rooftop" />
+        <img src="images/prettty_okay.jpg" alt="Hooligan Soup">
+        <img src="images/burn.jpg" alt="Hooligan Soup golden hour">
+        <img src="images/bw_roof_1.jpg" alt="Hooligan Soup rooftop">
       </div>
     </div>
   </section>
@@ -415,20 +418,25 @@
   <section id="contact">
     <div class="inner">
       <div class="section-label">Contact / Booking</div>
-      <p class="contact-intro">For booking inquiries, venue conversations, or just to say hi —</p>
-      <a class="contact-email" href="mailto:toddz@hooligansoupband.com">toddz@hooligansoupband.com</a>
-      <div class="can-wrap" style="margin-top: 2rem;">
-        <img src="images/HS2.jpg" alt="Hooligan Soup" />
-      </div>
-      <div class="social-row">
-        <a href="https://www.facebook.com/hooligansoupband" target="_blank" rel="noopener">Facebook</a>
+      <div class="contact-layout">
+        <div>
+          <p class="contact-intro">For booking inquiries, venue conversations, or just to say hi —</p>
+          <a class="contact-email" href="mailto:toddz@hooligansoupband.com">toddz@hooligansoupband.com</a>
+          <div class="social-row">
+            <a href="https://www.facebook.com/hooligansoupband" target="_blank" rel="noopener">Facebook</a>
+          </div>
+        </div>
+        <div class="can-wrap">
+          <img src="images/HS2.jpg" alt="Hooligan Soup">
+        </div>
       </div>
     </div>
   </section>
 
   <footer>
-    &copy; 2026 Hooligan Soup &nbsp;·&nbsp; Kelowna, BC
+    © 2026 Hooligan Soup &nbsp;·&nbsp; Kelowna, BC
   </footer>
 
-</body>
-</html>
+
+
+</body></html>
