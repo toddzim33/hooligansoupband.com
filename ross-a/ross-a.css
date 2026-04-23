@@ -164,32 +164,28 @@ body {
   background: rgba(255,255,255,0.06);
 }
 
-/* kitchen photo — swap placeholder with real photo */
 .hero-right {
   position: relative;
   overflow: hidden;
   background:
-    linear-gradient(to right, var(--navy) 0%, rgba(17,30,61,0.55) 35%, rgba(17,30,61,0.2) 100%),
-    linear-gradient(160deg, #0d1f3c 0%, #1a3a6b 40%, #0b2040 100%);
+    linear-gradient(to right, var(--navy) 0%, rgba(17,30,61,0.5) 30%, rgba(0,0,0,0.45) 100%),
+    url('images/kitchen.png') center/cover no-repeat;
   min-height: 500px;
-}
-
-/* replace the gradient above with a real photo:
-   background: linear-gradient(to right, var(--navy), rgba(17,30,61,0.4)),
-               url('images/kitchen.jpg') center/cover no-repeat;
-*/
-.hero-right-inner {
-  position: absolute;
-  inset: 0;
   display: flex;
-  align-items: flex-end;
-  padding: 2rem;
+  align-items: center;
+  justify-content: center;
 }
 
-.hero-photo-credit {
-  font-size: 0.7rem;
-  color: rgba(255,255,255,0.25);
-  font-style: italic;
+.hero-logo-overlay {
+  width: 72%;
+  max-width: 380px;
+  min-width: 200px;
+  opacity: 0.82;
+  filter:
+    drop-shadow(0 0 60px rgba(0,0,0,0.7))
+    drop-shadow(0 4px 24px rgba(0,0,0,0.5));
+  position: relative;
+  z-index: 2;
 }
 
 /* ── CONTAINER ── */
