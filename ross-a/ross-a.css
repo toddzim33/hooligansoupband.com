@@ -174,11 +174,11 @@ body {
 }
 
 .hero-logo-overlay {
-  width: 200px;
+  width: 100%;
   height: auto;
   display: block;
-  margin-bottom: 2rem;
-  filter: drop-shadow(0 6px 24px rgba(0,194,240,0.3));
+  margin-bottom: 2.5rem;
+  filter: drop-shadow(0 8px 40px rgba(0,194,240,0.4));
 }
 
 /* ── CONTAINER ── */
