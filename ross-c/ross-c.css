@@ -144,15 +144,14 @@ body {
 }
 
 .acronym-stack {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: max-content auto;
+  align-items: center;
   margin-bottom: 0.5rem;
 }
 
 .acronym-line {
-  display: flex;
-  align-items: center;
-  line-height: 1;
+  display: contents;
 }
 
 .acronym-letter {
@@ -162,11 +161,7 @@ body {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  display: inline-block;
-  width: 0.7em;
-  flex-shrink: 0;
   line-height: 1.2;
-  text-align: left;
 }
 
 .acronym-word {
@@ -176,6 +171,7 @@ body {
   letter-spacing: 0.14em;
   text-transform: uppercase;
   padding-left: 0.35rem;
+  align-self: center;
 }
 
 .hero-rule {
@@ -517,7 +513,7 @@ body {
 
   .hero-vdivider { display: none; }
   .hero-logo-icon { width: 240px; height: auto; }
-  .acronym-line { justify-content: center; }
+  .acronym-stack { justify-items: center; }
   .hero-rule { margin: 1.2rem auto 1rem; }
 
   .about-inner { grid-template-columns: 1fr; gap: 2.5rem; }
